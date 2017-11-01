@@ -46,7 +46,7 @@ int main(int argc, char** argv)
   private_node_handle.param<std::string>("tf_frame_id", tf_frame_id, "imu_link");
   private_node_handle.param<std::string>("frame_id", frame_id, "imu_link");
   private_node_handle.param<double>("time_offset_in_seconds", time_offset_in_seconds, 0.0);
-  private_node_handle.param<bool>("broadcast_tf", broadcast_tf, true);
+  private_node_handle.param<bool>("broadcast_tf", broadcast_tf, false);
   private_node_handle.param<double>("linear_acceleration_stddev", linear_acceleration_stddev, 0.0);
   private_node_handle.param<double>("angular_velocity_stddev", angular_velocity_stddev, 0.0);
   private_node_handle.param<double>("orientation_stddev", orientation_stddev, 0.0);
