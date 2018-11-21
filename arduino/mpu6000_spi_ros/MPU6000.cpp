@@ -41,7 +41,8 @@ void MPU6000::init() {
 //  delay(10);
   spiWrite(GYRO_CONFIG, FS_SEL_2000);
 //  delay(10);
-  spiWrite(ACCEL_CONFIG, AFS_SEL_16);
+//  spiWrite(ACCEL_CONFIG, AFS_SEL_16);
+  spiWrite(ACCEL_CONFIG, AFS_SEL_4);
 //  delay(10);
   spiWrite(INT_ENABLE, 0x01); //RAW_DATA_RDY_EN = True
 //  delay(10);
