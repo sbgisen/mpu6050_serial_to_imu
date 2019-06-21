@@ -135,11 +135,11 @@ int main(int argc, char** argv)
                 // without the last factor the velocities were too small
                 // http://www.i2cdevlib.com/forums/topic/106-get-angular-velocity-from-mpu-6050/
                 // FIFO frequency 100 Hz -> factor 10 ?
-                // seems 25 is the right factor
+                // seems 25 is the right factor->without dmp, the answer is 1.
                 //TODO: check / test if rotational velocities are correct
-                double gxf = gx * (4000.0/65536.0) * (M_PI/180.0) * 25.0;
-                double gyf = gy * (4000.0/65536.0) * (M_PI/180.0) * 25.0;
-                double gzf = gz * (4000.0/65536.0) * (M_PI/180.0) * 25.0;
+                double gxf = gx * (4000.0/65536.0) * (M_PI/180.0);
+                double gyf = gy * (4000.0/65536.0) * (M_PI/180.0);
+                double gzf = gz * (4000.0/65536.0) * (M_PI/180.0);
 
                 // get acelerometer values
                 int16_t ax = (((0xff &(char)input[data_packet_start + 16]) << 8) | 0xff &(char)input[data_packet_start + 17]);
