@@ -6,4 +6,4 @@
      platformio update
    ```
 # script:
-    `platformio run`
+    `platformio run -t=upload`
