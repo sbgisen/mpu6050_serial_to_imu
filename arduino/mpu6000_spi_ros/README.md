@@ -5,5 +5,6 @@
      pip install -U platformio
      platformio update
    ```
+   
 # script:
-    `platformio run -t=upload`
+    `platformio run -t upload`
